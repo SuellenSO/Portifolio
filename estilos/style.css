@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+:root {
+    --roxo: #5503A6;
+    --rosa-destaque: #BA2189;
+    --rosa-claro: #F199F2;
+    --lilas: #976DF2;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body, html {
+    background-image: linear-gradient(to right top, var(--rosa-claro)12%, var(--rosa-destaque), var(--roxo)75%);
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+.menu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+li {
+    list-style-type: none;
+    padding: 0px 10px;
+}
+header {
+    background: url(../imagens/fundoheader.png) no-repeat;
+    height: 500px;
+    margin: auto;
+    background-size: cover;
+}
