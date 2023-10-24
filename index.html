@@ -8,36 +8,38 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Portifolio pessoal</title>
 </head>
-<body>
+<body onresize="mudoutamanho()">
     <header>
+        <i class="ri-menu-line" onclick="toggleMenu()"></i>
         <nav>
-            <menu class="menu">
-                <i class="ri-menu-line"></i>
-                <ul class="menu">
-                    <li><a href="#"></a>Home</li>
-                    <li><a href="#"></a>Sobre mim</li>
-                    <li><a href="#"></a>Portifólio</li>
-                    <li><a href="#"></a>Contato</li>
-                </ul>
+            <menu id="menu" class="menu">
+                    <ul>
+                        <li><a href="#"></a>Home</li>
+                        <li><a href="#"></a>Sobre mim</li>
+                        <li><a href="#"></a>Portifólio</li>
+                        <li><a href="#"></a>Contato</li>
+                    </ul>
             </menu>
         </nav>
         <section>
-            <div class="titulo">
-                <h1>Olá, eu sou a </h1>
-                <h1>Suellen Oliveira</h1>
-                <p>Bem vindo ao meu site portifólio, aqui você pode descobrir mais de mim e um pouco dos meus projetos! Tenho como propósito utilizar de todas as minhas habilidades nesse site, sendo elas focadas no front-end.</p>
-            </div>
-            <div class="tec">
-                <h2>Atualmente nesse site é usado as tecnologias:</h2>
-            </div>
-            <div class="linguagens">
-                <menu>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                    </ul>
-                </menu>
+            <div id="apresentacao">
+                <div class="titulo">
+                    <h1 id="ola">Olá, eu sou a </h1>
+                    <h1 id="nome">Suellen Oliveira</h1>
+                    <p>Bem vindo ao meu site portifólio, aqui você pode descobrir mais de mim e um pouco dos meus projetos! Tenho como propósito utilizar de todas as minhas habilidades nesse site, sendo elas focadas no front-end.</p>
+                </div>
+                <div class="tec">
+                    <h2 id="att">Atualmente nesse site é usado as tecnologias:</h2>
+                </div>
+                <div class="linguagens">
+                    <menu class="lig">
+                        <ul>
+                            <li class="ling">HTML</li>
+                            <li class="ling">CSS</li>
+                            <li class="ling">Javascript</li>
+                        </ul>
+                    </menu>
+                </div>
             </div>
         </section>
     </header>
@@ -49,5 +51,22 @@
     <footer>
 
     </footer>
+    <script>
+        function toggleMenu() {
+            if (menu.style.display == 'flex') {
+                menu.style.display = 'none'
+            }
+            else {
+                menu.style.display = 'flex'
+            }
+        }
+        function mudoutamanho() {
+            if (window.innerWidth >= 600) {
+                menu.style.display = 'flex'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
