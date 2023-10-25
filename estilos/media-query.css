@@ -8,6 +8,7 @@
         background-color: transparent;
         position: relative;
         width: 100vw;
+        box-shadow: none;
     }
     .ri-menu-line {
         display: none;
@@ -35,6 +36,9 @@
     #apresentacao {
         margin: 17px;
     }
+    nav {
+        padding: 5px;
+    }
 
 }
 @media screen and (min-width: 992px) {
@@ -45,6 +49,7 @@
         background-color: transparent;
         position: relative;
         width: 100vw;
+        box-shadow: none;
     }
     .ri-menu-line {
         display: none;
@@ -67,5 +72,8 @@
     }
     #apresentacao {
         margin: 50px;
+    }
+    nav {
+        padding: 5px;
     }
 }

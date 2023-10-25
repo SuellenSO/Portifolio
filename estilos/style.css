@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 :root {
     --roxo: #5503A6;
     --rosa-destaque: #BA2189;
@@ -51,29 +52,33 @@ nav {
     display: flex;
     padding-top: 20px;
     border: rgba(128, 128, 128, 0.411);
+    padding: 25px;
 
 }
 #menu {
     position: absolute;
     display: none;
     background-color: white;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: end;
-    width: 100vw;
-
+    align-items: center;
+    width: 100px;
+    box-shadow: 4px 6px 7px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    padding: 20px;
+    height: 332px;
+    font-family: 'Montserrat';
+    font-size: 0.85em;
+    text-transform: uppercase;
 }
 .ri-menu-line {
     font-size: 20px;
     position: absolute;
     display: flex;
-    background-color: white;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: end;
-    width: 100vw;
-
-
+    padding: 15px;
 }
 section {
     background-color: rgba(255, 255, 255, 0.534);
@@ -81,9 +86,10 @@ section {
     padding: 20px;
     width: 400px;
     border-radius: 20px;
-    box-shadow: 8px 6px 19px rgba(0, 0, 0, 0.288);
+    box-shadow: 8px 6px 19px rgba(0, 0, 0, 0.096);
     text-align: center;
-
+    font-family: 'Montserrat';
+    font-size: 0.85em;
 }
 .lig {
     display: inline-block;
@@ -98,4 +104,9 @@ section {
 }
 main {
     color: white;
+}
+.menu-mobile {
+    padding: 15px 10px;
+    color: var(--roxo);
+
 }
