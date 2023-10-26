@@ -11,6 +11,9 @@
     margin: 0px;
     padding: 0px;
 }
+a {
+    text-decoration: none;
+}
 body, html {
     background: url('../imagens/40\ Sem\ Título_20231025210313.png');
     background-repeat: no-repeat;
@@ -113,6 +116,25 @@ main {
     color: var(--roxo);
 
 }
+.menu-mobile:hover {
+    box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.705);
+}
 foter {
     background-color: transparent;
+}
+.hablidades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 40px;
+    justify-content: center;
+}
+.img1 {
+    width: 300px;
+    height: 300px;
+}
+article {
+    width: 450px;
+    height: 300px;
 }

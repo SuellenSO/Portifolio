@@ -10,6 +10,10 @@
         width: 100vw;
         box-shadow: none;
         height: 25px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.61);
+    }
+    a {
+        color: white;
     }
     .ri-menu-line {
         display: none;
@@ -57,7 +61,11 @@
         width: 100vw;
         box-shadow: none;
         height: 25px;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.61);
 
+    }
+    a {
+        color: white;
     }
     .ri-menu-line {
         display: none;
