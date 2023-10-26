@@ -12,10 +12,12 @@
     padding: 0px;
 }
 body, html {
-    background-image: linear-gradient(to right top, var(--rosa-claro)12%, var(--rosa-destaque), var(--roxo)75%);
+    background: url('../imagens/40\ Sem\ Título_20231025210313.png');
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    width: 100vw;
 }
 h1, h2 {
     font-family: 'Montserrat';
@@ -103,10 +105,14 @@ section {
     border-radius: 3px;
 }
 main {
-    color: white;
+    background-color: white;
+    height: 700px;
 }
 .menu-mobile {
     padding: 15px 10px;
     color: var(--roxo);
 
+}
+foter {
+    background-color: transparent;
 }
