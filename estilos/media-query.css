@@ -15,8 +15,9 @@
     a {
         color: white;
     }
-    .ri-menu-line {
+    .hamburger{
         display: none;
+
     }
     li > .ri-menu-line {
         display: none;
@@ -71,7 +72,7 @@
     a {
         color: white;
     }
-    .ri-menu-line {
+    .hamburger {
         display: none;
         
     }
