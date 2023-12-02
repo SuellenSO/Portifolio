@@ -9,7 +9,7 @@
         position: relative;
         width: 100vw;
         box-shadow: none;
-        height: 25px;
+        height: 30px;
         text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.61);
     }
     a {
@@ -18,6 +18,10 @@
     .ri-menu-line {
         display: none;
     }
+    li > .ri-menu-line {
+        display: none;
+    }
+    
     header {
         background-size: contain;
         background-attachment: fixed;
@@ -60,7 +64,7 @@
         position: relative;
         width: 100vw;
         box-shadow: none;
-        height: 25px;
+        height: 30px;
         text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.61);
 
     }
@@ -68,6 +72,10 @@
         color: white;
     }
     .ri-menu-line {
+        display: none;
+        
+    }
+    li > .ri-menu-line {
         display: none;
     }
     header {

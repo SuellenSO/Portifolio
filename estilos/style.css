@@ -52,6 +52,7 @@ header {
 li {
     list-style-type: none;
     padding: 5px 10px;
+    border-radius: 5px;
 }
 nav {
     display: flex;
@@ -62,7 +63,7 @@ nav {
 }
 #menu {
     position: absolute;
-    display: none;
+    display: flex;
     background-color: white;
     flex-direction: row;
     flex-wrap: wrap;
@@ -70,13 +71,28 @@ nav {
     width: 100px;
     box-shadow: 4px 6px 7px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
-    padding: 20px;
-    height: 332px;
+    padding: 30px;
+    height: 335px;
     font-family: 'Montserrat';
     font-size: 0.85em;
     text-transform: uppercase;
+    border-radius: 5px;
+    margin: -20px;
+    
+}
+li > .ri-menu-line {
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    padding: 0px;
+
 }
 .ri-menu-line {
+    position: relative;
     font-size: 20px;
     position: absolute;
     display: flex;
@@ -95,6 +111,7 @@ section {
     text-align: center;
     font-family: 'Montserrat';
     font-size: 0.85em;
+
 }
 .lig {
     display: inline-block;
@@ -117,7 +134,7 @@ main {
 
 }
 .menu-mobile:hover {
-    box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.705);
+    text-decoration: underline;
 }
 foter {
     background-color: transparent;
