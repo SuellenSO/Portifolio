@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
-    #menu {
+    .nav-list {
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         background-color: transparent;
-        position: relative;
+        position: absolute;
         width: 100vw;
         box-shadow: none;
         height: 30px;
@@ -19,9 +19,7 @@
         display: none;
 
     }
-    li > .ri-menu-line {
-        display: none;
-    }
+
     
     header {
         background-size: contain;
@@ -57,7 +55,7 @@
 
 }
 @media screen and (min-width: 992px) {
-    #menu {
+    .nav-list{
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
@@ -76,9 +74,7 @@
         display: none;
         
     }
-    li > .ri-menu-line {
-        display: none;
-    }
+
     header {
         background-size: contain;
         background-attachment: fixed;
