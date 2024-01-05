@@ -50,63 +50,50 @@ header {
     width: 100vw;
     height: 400px;
 }
-li {
-    list-style-type: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+a {
+    color: white;
+    text-decoration: none;
+
 }
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+ul {
+    list-style-type: none;
+  }
+  
 nav {
     display: flex;
-    padding-top: 20px;
-    border: rgba(128, 128, 128, 0.411);
-    padding: 25px;
-
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat';
+    height: 8vh;
+    background-color:rgb(223, 123, 248);
 }
 .nav-list {
-    position: absolute;
+    list-style: none;
     display: flex;
-    background-color: white;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    width: 50vw;
-    box-shadow: 4px 6px 7px rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-    padding: 30px;
-    height: 100vh;
-    font-family: 'Montserrat';
-    font-size: 0.85em;
-    text-transform: uppercase;
-    border-radius: 5px;
-    margin: 0px;
-    gap: 0px;
-    clip-path: circle(100px at -10% -15%);
-    transition: 1s ease-out;
-
 }
-.menu.active .nav-list {
-    clip-path: circle(1500px at -10% -15%);
-    pointer-events: all;
+.nav-list li {
+    letter-spacing: 1px;
+    margin-left: 32px;
 }
-.hamburger {
-    border: none;
-    background: none;
-    border-top: 3px solid var(--roxo);
+.ling {
+    padding: 7px;
+}
+.mobile-menu {
     cursor: pointer;
-    position: relative;
-    
-    
+    display: none;
 }
-.hamburger::before, .hamburger::after {
-    content: "  ";
-    display: block;
-    width: 30px;
-    height: 3px;
-    margin-top: 5px;
-    background: var(--roxo);
-
-
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: white;
+    margin: 6px;
+    transition: 0.3s;
 }
 section {
     background-color: rgba(255, 255, 255, 0.534);
@@ -134,14 +121,6 @@ section {
 main {
     background-color: white;
     height: 700px;
-}
-.menu-mobile {
-    padding: 15px 10px;
-    color: var(--roxo);
-
-}
-.menu-mobile:hover {
-    text-decoration: underline;
 }
 foter {
     background-color: transparent;

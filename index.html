@@ -11,15 +11,18 @@
 <body onresize="mudoutamanho()">
     <header>
         <nav class="nav">
-            <menu id="menu" class="menu">
-                   <button class = "hamburger"></button>
-                    <ul class="nav-list">
-                        <li class="menu-mobile"><a href="#">Home</a></li>
-                        <li class="menu-mobile"><a href="#">Sobre mim</a></li>
-                        <li class="menu-mobile"><a href="#">Portifólio</a></li>
-                        <li class="menu-mobile"><a href="#">Contato</a></li>
-                    </ul>
-            </menu>
+            <a href="/" class="logo">SSO</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/">Sobre</a></li>
+                <li><a href="/">Projetos</a></li>
+                <li><a href="/">Contato</a></li>
+            </ul>
         </nav>
         <section>
             <div id="apresentacao">
@@ -57,16 +60,56 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus inventore hic laboriosam reiciendis nemo veniam consequatur nulla quasi, nesciunt sunt enim ipsam architecto beatae, quisquam expedita, est veritatis. Dolores!</p>
     </footer>
     <script>
-        const hamburger = document.querySelector(".hamburger")
-        const nav = document.querySelector(".menu")
-        hamburger.addEventListener("click", () => menu.classList.toggle("active"))
-        function mudoutamanho() {
+                function mudoutamanho() {
             if (window.innerWidth >= 600) {
                 menu.style.display = 'flex'
             } else {
                 menu.style.display = 'none'
             }
         }
+        class MobileNavBar {
+    constructor(mobileMenu, navList, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+        this.addClickEvent();
+    }
+    animateLinks(){
+        this.navLinks.forEach((link, index) => {
+            link.style.animation
+                ? (link.style.animation = " ")
+               : (link.style.animation = `navLinkFade 0.5 ease forwards ${index / 7 + 0.3}s`);
+        })
+    }
+    handleClick() {
+        this.navList.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+        this.animateLinks();
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init() {
+        if (this.mobileMenu) {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const mobileNavBar = new MobileNavBar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li"
+);
+
+mobileNavBar.init();
+
     </script>
 </body>
 </html>

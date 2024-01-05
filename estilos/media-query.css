@@ -1,26 +1,30 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
+
     .nav-list {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        background-color: transparent;
         position: absolute;
-        width: 100vw;
-        box-shadow: none;
-        height: 30px;
-        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.61);
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: rgb(223, 123, 248);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
     }
-    a {
-        color: white;
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
     }
-    .hamburger{
-        display: none;
-
+    .mobile-menu {
+        display: block;
     }
-
-    
+    .nav-list.active {
+        transform: translateX(0);
+    }
     header {
         background-size: contain;
         background-attachment: fixed;
@@ -52,28 +56,28 @@
         color: white;
     
     }
-
-}
-@media screen and (min-width: 992px) {
-    .nav-list{
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        background-color: transparent;
-        position: relative;
-        width: 100vw;
-        box-shadow: none;
-        height: 30px;
-        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.61);
-
+    .mobile-menu.active .line1 {
+        transform: rotate(-50deg) translate(-8px, 8px);
     }
-    a {
-        color: white;
+    .mobile-menu.active .line2 {
+        opacity: 0;
     }
-    .hamburger {
-        display: none;
+    .mobile-menu.active .line3 {
+        transform: rotate(50deg) translate(-3px, -5px);
+    }
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 2;
+            transform: translateX(0);
+        }
         
     }
+}
+    @media screen and (min-width: 992px) {
 
     header {
         background-size: contain;
